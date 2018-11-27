@@ -15,48 +15,22 @@
  */
 package org.atmosphere.play;
 
-import akka.NotUsed;
-import akka.actor.ActorRef;
-import akka.actor.ActorRefFactory;
 import akka.actor.ActorSystem;
-import akka.actor.Props;
-import akka.japi.Pair;
 import akka.stream.Materializer;
 import akka.stream.OverflowStrategy;
-import akka.stream.javadsl.Flow;
-import akka.stream.javadsl.Keep;
-import akka.stream.javadsl.Source;
-import akka.stream.scaladsl.Sink;
 import com.google.inject.Inject;
 import org.apache.commons.lang3.StringUtils;
 import org.atmosphere.cpr.AtmosphereConfig;
 import org.atmosphere.cpr.AtmosphereFramework;
 import org.atmosphere.util.IOUtils;
-import org.omg.CosNaming.NamingContextPackage.NotFound;
-import org.reactivestreams.Publisher;
 import play.api.libs.streams.ActorFlow;
-import play.api.mvc.AbstractController;
 import play.api.mvc.ControllerComponents;
 import play.api.mvc.Handler;
-import play.api.mvc.Request;
-import play.http.websocket.Message;
-import play.libs.F;
+import play.api.mvc.WebSocket$;
 import play.mvc.Controller;
-import play.mvc.Http;
-import play.mvc.Result;
-import play.mvc.WebSocket;
-import scala.Function0;
-import scala.Function1;
-import play.api.mvc.*;
-import scala.concurrent.Future;
-import scala.concurrent.duration.FiniteDuration;
-import scala.util.Either;
 
 import java.util.Collections;
 import java.util.Map;
-import java.util.concurrent.CompletionStage;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class AtmosphereController extends Controller {
 	private final AtmosphereFramework framework;

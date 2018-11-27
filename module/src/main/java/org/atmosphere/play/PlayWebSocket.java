@@ -19,22 +19,13 @@ import akka.actor.ActorRef;
 import akka.actor.PoisonPill;
 import akka.util.ByteString;
 import org.atmosphere.cpr.AtmosphereConfig;
-import org.atmosphere.cpr.AtmosphereRequest;
-import org.atmosphere.cpr.AtmosphereResponseImpl;
-import org.atmosphere.cpr.WebSocketProcessorFactory;
-import org.atmosphere.websocket.WebSocketProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import play.libs.F;
-import play.mvc.Http;
-//import play.mvc.LegacyWebSocket;
-import play.mvc.WebSocket;
-
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.function.Consumer;
+
+//import play.mvc.LegacyWebSocket;
 
 public class PlayWebSocket extends org.atmosphere.websocket.WebSocket {
     private static final Logger logger = LoggerFactory.getLogger(PlayWebSocket.class);

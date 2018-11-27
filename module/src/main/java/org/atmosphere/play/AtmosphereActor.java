@@ -1,17 +1,12 @@
 package org.atmosphere.play;
 
 import akka.actor.AbstractActor;
-import akka.actor.Actor;
 import akka.actor.ActorRef;
-import akka.actor.IllegalActorStateException;
 import akka.actor.Props;
-import akka.japi.pf.ReceiveBuilder;
 import akka.util.ByteString;
 import play.Logger;
 import play.api.mvc.RequestHeader;
 import play.libs.akka.InjectedActorSupport;
-import scala.PartialFunction;
-import scala.runtime.BoxedUnit;
 
 import java.util.Map;
 
